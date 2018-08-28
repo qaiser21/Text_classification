@@ -1,6 +1,7 @@
  
 """
-class made for preprocessing text using nltk , so this can be used with scikit pipeline
+class made for preprocessing text using nltk using sklearn BaseEstimator and TransformerMixin, 
+so this can be used with scikit pipeline
 """
 import nltk
 from nltk.corpus import stopwords as sw
