@@ -1,5 +1,7 @@
  
-
+"""
+class made for preprocessing text using nltk , so this can be used with scikit pipeline
+"""
 import nltk
 from nltk.corpus import stopwords as sw
 from nltk.corpus import wordnet as wn
@@ -11,7 +13,6 @@ import string
 from sklearn.base import BaseEstimator, TransformerMixin
 import re
 from string import punctuation
-
 
 
 class NLTKPreprocessor(BaseEstimator, TransformerMixin):
@@ -70,22 +71,4 @@ class NLTKPreprocessor(BaseEstimator, TransformerMixin):
 
 
 
-
- # for extracting content of resume
-
-
-
-def read_csv(filename):
-	text  = textract.process(filename)
- 	return text.decode('utf-8')
-
-
-
-
-def resume_corpus(data_science):
-	resume_corpus = []
-	for cv in data_science:
-		resume_document=read_cv(cv)
-        resume_corpus.append(resume_document)
-    return corpus
 
